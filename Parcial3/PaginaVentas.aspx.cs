@@ -16,7 +16,7 @@ public partial class PaginaVentas : System.Web.UI.Page
         lblUsuario.Text = (string)Session["username"];
 
         Random random = new Random();
-        txtFolio.Text = random.Next(1001, 2000).ToString();
+        txtFolio.Text = random.Next(10, 2000).ToString();
     }
 
     protected void btnCalcular_Click(object sender, EventArgs e)
@@ -50,25 +50,26 @@ public partial class PaginaVentas : System.Web.UI.Page
 
     protected void btnPagar_Click(object sender, EventArgs e)
     {
-        string rutcliente, fechaemision;
+        string rutcliente, fechaemision,textofactura;
         int idfactura, totalfactura;
         DateTime fechaSQL = new DateTime();
         bool estado;
 
-        totalfactura = Int32.Parse(txtTotal.Text);
+        textofactura = txtTotal.Text;
 
-        if (totalfactura != 0)
+        if (!textofactura.Equals(""))
         {
             idfactura = Int32.Parse(txtFolio.Text);
             rutcliente = ddlRut.SelectedItem.ToString();
             fechaSQL = DateTime.Parse(txtFecha.Text);
             fechaemision = fechaSQL.ToShortDateString();
+            totalfactura = Int32.Parse(txtTotal.Text);
 
             estado = FacturaDAO.Agregar(idfactura, rutcliente, fechaemision, totalfactura);
 
             lblError.Text = (estado) ? lblError.Text = "Error" : lblError.Text = "";
 
-            enviarAlerta("Factura generada con exito");
+            enviarAlerta("Factura generada con exito" , idfactura.ToString());
         }
  
 
@@ -81,9 +82,9 @@ public partial class PaginaVentas : System.Web.UI.Page
     }
 
 
-    public void enviarAlerta(string mensaje)
+    public void enviarAlerta(string mensaje, string folio)
     {
-        ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('" + mensaje + "')", true);
+        ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('" + mensaje + ", su N° de Folio es: " + folio + "')", true);
     }
 
 }

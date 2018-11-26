@@ -11,6 +11,7 @@ public partial class ConsultaFacturaFecha : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         lblUsuario.Text = (string)Session["username"];
+        lblError.Visible = false;
     }
 
     protected void btnConsultar_Click(object sender, EventArgs e)
@@ -25,8 +26,12 @@ public partial class ConsultaFacturaFecha : System.Web.UI.Page
 
         dt = FacturaDAO.BuscarFacturaFecha(fecha);
 
+        lblError.Visible = (dt.Rows.Count > 0) ? false : true;
+
         gvFacturas.DataSource = dt;
         gvFacturas.DataBind();
+     
+       
 
     }
 }

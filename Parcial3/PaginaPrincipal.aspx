@@ -12,10 +12,6 @@
         width: 427px;
         text-align: center;
     }
-    .auto-style23 {
-        width: 427px;
-        height: 23px;
-    }
     .auto-style24 {
         width: 429px;
     }
@@ -59,7 +55,9 @@
     <tr>
         <td class="auto-style25">Iniciaste sesión como:</td>
         <td class="auto-style26">
+            <strong>
             <asp:Label ID="lblUsuario" runat="server"></asp:Label>
+            </strong>
         </td>
     </tr>
 </table>

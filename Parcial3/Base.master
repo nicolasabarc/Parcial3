@@ -69,7 +69,9 @@
                     <td class="auto-style12"></td>
                 </tr>
                 <tr>
-                    <td class="auto-style13">&nbsp;</td>
+                    <td class="auto-style13">
+                        <asp:Image ID="imgLogo" runat="server" Height="140px" ImageUrl="~/src/logo.png" Width="160px" />
+                    </td>
                     <td class="auto-style9"><h3>TodoRespuestosPC SPA</h3></td>
                     <td class="auto-style10">&nbsp;   <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">   
                         <table class="auto-style24">

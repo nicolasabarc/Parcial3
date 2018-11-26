@@ -109,8 +109,14 @@
         </tr>
         <tr>
             <td class="auto-style30">&nbsp;</td>
+            <td class="auto-style18" colspan="2">
+                <asp:Label ID="lblError" runat="server" Enabled="False" ForeColor="Red" Text="No se encontraron resultados."></asp:Label>
+            </td>
+            <td class="auto-style31">&nbsp;</td>
+        </tr>
+        <tr>
             <td class="auto-style30">&nbsp;</td>
-            <td class="auto-style30">&nbsp;</td>
+            <td class="auto-style18" colspan="2">&nbsp;</td>
             <td class="auto-style31">&nbsp;</td>
         </tr>
         <tr>
