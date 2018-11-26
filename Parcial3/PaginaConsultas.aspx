@@ -27,6 +27,10 @@
             height: 20px;
             text-align: center;
         }
+    .auto-style38 {
+        width: 427px;
+        height: 26px;
+    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
@@ -34,7 +38,9 @@
         <tr>
             <td class="auto-style25">Iniciaste sesión como:</td>
             <td class="auto-style26">
+                <strong>
                 <asp:Label ID="lblUsuario" runat="server"></asp:Label>
+                </strong>
             </td>
         </tr>
     </table>
@@ -43,14 +49,13 @@
     <table class="auto-style27">
         <tr>
             <td class="auto-style34">
-                <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/PaginaPrincipal.aspx">Volver</asp:HyperLink>
-            </td>
+                &nbsp;</td>
             <td class="auto-style34" colspan="2">&nbsp;</td>
             <td class="auto-style34">&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style34">&nbsp;</td>
-            <td class="auto-style35" colspan="2">CONSULTAS</td>
+            <td class="auto-style35" colspan="2"><strong>CONSULTAS</strong></td>
             <td class="auto-style34">&nbsp;</td>
         </tr>
         <tr>
@@ -72,13 +77,25 @@
             <td class="auto-style34">&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style34">&nbsp;</td>
-            <td class="auto-style34" colspan="2">&nbsp;</td>
-            <td class="auto-style34">&nbsp;</td>
+            <td class="auto-style38"></td>
+            <td class="auto-style38" colspan="2"></td>
+            <td class="auto-style38"></td>
+        </tr>
+        <tr>
+            <td class="auto-style38">&nbsp;</td>
+            <td class="auto-style38" colspan="2">&nbsp;</td>
+            <td class="auto-style38">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style38">&nbsp;</td>
+            <td class="auto-style38" colspan="2">&nbsp;</td>
+            <td class="auto-style38">&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style34">&nbsp;</td>
-            <td class="auto-style34" colspan="2">&nbsp;</td>
+            <td class="auto-style35" colspan="2">
+                <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/PaginaPrincipal.aspx">Volver</asp:HyperLink>
+            </td>
             <td class="auto-style34">&nbsp;</td>
         </tr>
     </table>

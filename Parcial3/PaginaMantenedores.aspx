@@ -33,6 +33,10 @@
             height: 26px;
             text-align: center;
         }
+    .auto-style34 {
+        width: 427px;
+        text-align: center;
+    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
@@ -40,7 +44,9 @@
         <tr>
             <td class="auto-style25">Iniciaste sesión como:</td>
             <td class="auto-style26">
+                <strong>
                 <asp:Label ID="lblUsuario" runat="server"></asp:Label>
+                </strong>
             </td>
         </tr>
     </table>
@@ -49,9 +55,8 @@
     <table class="auto-style27">
         <tr>
             <td class="auto-style30">
-                <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/PaginaPrincipal.aspx">Volver</asp:HyperLink>
-            </td>
-            <td class="auto-style32">MANTENEDORES</td>
+                &nbsp;</td>
+            <td class="auto-style32"><strong>MANTENEDORES</strong></td>
             <td class="auto-style30"></td>
         </tr>
         <tr>
@@ -78,6 +83,23 @@
         <tr>
             <td class="auto-style31">&nbsp;</td>
             <td class="auto-style31">&nbsp;</td>
+            <td class="auto-style31">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style31">&nbsp;</td>
+            <td class="auto-style31">&nbsp;</td>
+            <td class="auto-style31">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style31">&nbsp;</td>
+            <td class="auto-style31">&nbsp;</td>
+            <td class="auto-style31">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style31">&nbsp;</td>
+            <td class="auto-style34">
+                <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/PaginaPrincipal.aspx">Volver</asp:HyperLink>
+            </td>
             <td class="auto-style31">&nbsp;</td>
         </tr>
     </table>

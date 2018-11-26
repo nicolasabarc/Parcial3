@@ -5,9 +5,6 @@ using System.Web;
 using System.Data;
 using System.Data.SqlClient;
 
-/// <summary>
-/// Descripción breve de FacturaDAO
-/// </summary>
 public class FacturaDAO
 {
 

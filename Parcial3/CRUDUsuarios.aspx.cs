@@ -40,8 +40,8 @@ public partial class CRUDUsuarios : System.Web.UI.Page
     
         estado = UsuarioDAO.Agregar(username,nombre,clave);
 
-        lblError.Text = (estado) ? lblError.Text = "Error" : lblError.Text = "Agregado";
-
+        lblError.Text = (estado) ? lblError.Text = "Error" : lblError.Text = "Agregado";     
+        
         gvUsuarios.DataBind();
 
         Limpiar(); 
@@ -92,4 +92,5 @@ public partial class CRUDUsuarios : System.Web.UI.Page
         txtNombre.Text = "";
         txtClave.Text = "";    
     }
+
 }

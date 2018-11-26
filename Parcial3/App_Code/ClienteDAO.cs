@@ -5,8 +5,6 @@ using System.Web;
 using System.Data;
 using System.Data.SqlClient;
 
-
-
 public class ClienteDAO
 {
     public static bool Agregar(string rut, string nombre, string apellido, string direccion, string fono)

@@ -54,6 +54,9 @@
         text-align: left;
     }
         </style>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -67,7 +70,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style13">&nbsp;</td>
-                    <td class="auto-style9"><strong>TodoRespuestosPC SPA</strong></td>
+                    <td class="auto-style9"><h3>TodoRespuestosPC SPA</h3></td>
                     <td class="auto-style10">&nbsp;   <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">   
                         <table class="auto-style24">
                             <tr>
@@ -89,7 +92,12 @@
                 </tr>
                 <tr>
                     <td class="auto-style17">&nbsp;</td>
-                    <td class="auto-style18"><strong>Programación Avanzada de Aplicaciones</strong></td>
+                    <td class="auto-style18">&nbsp;</td>
+                    <td class="auto-style17">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style17">&nbsp;</td>
+                    <td class="auto-style18"><h5><em>Programación Avanzada de Aplicaciones</em></h5></td>
                     <td class="auto-style17">&nbsp;</td>
                 </tr>
             </table>
@@ -97,5 +105,8 @@
    
     </div>
     </form>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 </body>
 </html>

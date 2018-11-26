@@ -5,7 +5,6 @@ using System.Web;
 using System.Data;
 using System.Data.SqlClient;
 
-
 public class UsuarioDAO
 {
     public string Login(string usuario, string clave)
@@ -41,8 +40,8 @@ public class UsuarioDAO
         string sCnn = c.Conectar();
 
         string sSel = "INSERT INTO usuarios VALUES('" + username
-                                                     + "' , '" + nombre                                                    
-                                                     + "', '" + clave + "')";
+                                                     + "' , '" + clave                                                    
+                                                     + "', '" + nombre + "')";
 
         SqlDataAdapter da;
         DataTable dt = new DataTable();

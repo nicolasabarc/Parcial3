@@ -33,7 +33,9 @@
         <tr>
             <td class="auto-style25">Iniciaste sesión como:</td>
             <td class="auto-style26">
+                <strong>
                 <asp:Label ID="lblUsuario" runat="server"></asp:Label>
+                </strong>
             </td>
         </tr>
     </table>
@@ -42,15 +44,14 @@
     <table class="auto-style27">
         <tr>
             <td class="auto-style30">
-                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/PaginaPrincipal.aspx">Volver</asp:HyperLink>
-            </td>
+                &nbsp;</td>
             <td class="auto-style30">&nbsp;</td>
             <td class="auto-style30">&nbsp;</td>
             <td class="auto-style31">&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style30">&nbsp;</td>
-            <td class="auto-style18" colspan="2">CONSULTAR FACTURA POR FECHA</td>
+            <td class="auto-style18" colspan="2"><strong>CONSULTAR FACTURA POR FECHA</strong></td>
             <td class="auto-style31">&nbsp;</td>
         </tr>
         <tr>
@@ -63,7 +64,22 @@
             <td class="auto-style30">&nbsp;</td>
             <td class="auto-style30">FECHA:</td>
             <td class="auto-style30">
-                <asp:TextBox ID="txtFecha" runat="server" TextMode="Date" Width="314px"></asp:TextBox>
+                <asp:TextBox ID="txtFecha" runat="server" TextMode="Date" Width="314px" CssClass="form-control"></asp:TextBox>
+            </td>
+            <td class="auto-style31">
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtFecha" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style30">&nbsp;</td>
+            <td class="auto-style30">&nbsp;</td>
+            <td class="auto-style30">&nbsp;</td>
+            <td class="auto-style31">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style30">&nbsp;</td>
+            <td class="auto-style17" colspan="2">
+                <asp:Button ID="btnConsultar" runat="server" Text="Consultar" Width="639px" OnClick="btnConsultar_Click" CssClass="btn btn-info" />
             </td>
             <td class="auto-style31">&nbsp;</td>
         </tr>
@@ -76,20 +92,7 @@
         <tr>
             <td class="auto-style30">&nbsp;</td>
             <td class="auto-style17" colspan="2">
-                <asp:Button ID="btnConsultar" runat="server" Text="Consultar" Width="639px" OnClick="btnConsultar_Click" />
-            </td>
-            <td class="auto-style31">&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style30">&nbsp;</td>
-            <td class="auto-style30">&nbsp;</td>
-            <td class="auto-style30">&nbsp;</td>
-            <td class="auto-style31">&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style30">&nbsp;</td>
-            <td class="auto-style17" colspan="2">
-                <asp:GridView ID="gvFacturas" runat="server" Width="642px">
+                <asp:GridView ID="gvFacturas" runat="server" Width="642px"  CssClass="table table-borderless table-striped" BorderWidth="0px">
                 </asp:GridView>
             </td>
             <td class="auto-style31">&nbsp;</td>
@@ -102,8 +105,9 @@
         </tr>
         <tr>
             <td class="auto-style30">&nbsp;</td>
-            <td class="auto-style30">&nbsp;</td>
-            <td class="auto-style30">&nbsp;</td>
+            <td class="auto-style18" colspan="2">
+                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/PaginaPrincipal.aspx">Volver</asp:HyperLink>
+            </td>
             <td class="auto-style31">&nbsp;</td>
         </tr>
         <tr>

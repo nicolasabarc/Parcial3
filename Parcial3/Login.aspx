@@ -99,9 +99,9 @@
     <tr>
         <td class="auto-style26"></td>
         <td class="auto-style33" colspan="2">
-            <asp:Button ID="btnIngresar" runat="server" OnClick="btnIngresar_Click" Text="Ingresar" Width="100px" />
-        </td>
+            &nbsp;</td>
         <td class="auto-style27" colspan="2">
+            <asp:Button ID="btnIngresar" runat="server" OnClick="btnIngresar_Click" Text="Ingresar" Width="100px" />
             <asp:Button ID="btnRegistrarse" runat="server" OnClick="btnRegistrarse_Click" Text="Registrarse" Width="100px" />
         </td>
         <td class="auto-style28"></td>
@@ -114,7 +114,7 @@
     </tr>
     <tr>
         <td class="auto-style21">&nbsp;</td>
-        <td class="auto-style8" colspan="4">
+        <td class="text-center" colspan="4">
             <asp:Label ID="lblError" runat="server"></asp:Label>
         </td>
         <td class="auto-style22">&nbsp;</td>

@@ -28,10 +28,8 @@ public partial class PaginaVentas : System.Web.UI.Page
 
         if (nroproductos > 4) //Validamos que se hayan escogido menos de 4 productos
         {
-
             lblError.Text = "4 productos como maximo.";
             lblError.ForeColor = Color.Red;
-
         }
         else
         {
@@ -54,17 +52,25 @@ public partial class PaginaVentas : System.Web.UI.Page
     {
         string rutcliente, fechaemision;
         int idfactura, totalfactura;
+        DateTime fechaSQL = new DateTime();
         bool estado;
 
-        idfactura = Int32.Parse(txtFolio.Text);
-        rutcliente = ddlRut.SelectedItem.ToString();
-        fechaemision = txtFecha.Text;
         totalfactura = Int32.Parse(txtTotal.Text);
 
-        estado = FacturaDAO.Agregar(idfactura, rutcliente, fechaemision, totalfactura);
+        if (totalfactura != 0)
+        {
+            idfactura = Int32.Parse(txtFolio.Text);
+            rutcliente = ddlRut.SelectedItem.ToString();
+            fechaSQL = DateTime.Parse(txtFecha.Text);
+            fechaemision = fechaSQL.ToShortDateString();
 
-        lblError.Text = (estado) ? lblError.Text = "Error" : lblError.Text = "Agregada";
+            estado = FacturaDAO.Agregar(idfactura, rutcliente, fechaemision, totalfactura);
 
+            lblError.Text = (estado) ? lblError.Text = "Error" : lblError.Text = "";
+
+            enviarAlerta("Factura generada con exito");
+        }
+ 
 
     }
 
@@ -73,6 +79,13 @@ public partial class PaginaVentas : System.Web.UI.Page
         int nroproductos = cbProductos.Items.Cast<ListItem>().Count(li => li.Selected);
         args.IsValid = (nroproductos > 0);
     }
+
+
+    public void enviarAlerta(string mensaje)
+    {
+        ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('" + mensaje + "')", true);
+    }
+
 }
 
     
