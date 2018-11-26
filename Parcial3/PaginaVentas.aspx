@@ -95,7 +95,8 @@
             <td class="auto-style34">&nbsp;</td>
             <td class="auto-style34">FOLIO:</td>
             <td class="auto-style34">
-                <asp:TextBox ID="txtFolio" runat="server" CssClass="auto-style39" Enabled="False" Width="150px"></asp:TextBox>
+                <asp:TextBox ID="txtFolio" runat="server" CssClass="auto-style39" Enabled="False" Width="150px" MaxLength="4"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtFolio" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
             <td class="auto-style34">&nbsp;</td>
         </tr>
@@ -106,6 +107,7 @@
                 <asp:DropDownList ID="ddlRut" runat="server" DataSourceID="SqlDataSource2" DataTextField="rut" DataValueField="rut" Width="150px">
                 </asp:DropDownList>
                 <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:Parcial3ConnectionString %>" SelectCommand="SELECT [rut] FROM [Clientes]"></asp:SqlDataSource>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="ddlRut" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
             <td class="auto-style35">&nbsp;</td>
         </tr>
@@ -114,6 +116,7 @@
             <td class="auto-style35">FECHA EMISION:</td>
             <td class="auto-style35">
                 <asp:TextBox ID="txtFecha" runat="server" TextMode="Date"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtFecha" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
             <td class="auto-style35"></td>
         </tr>
@@ -123,9 +126,9 @@
             <td class="auto-style35">&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style35">&nbsp;</td>
-            <td class="auto-style35" colspan="2">&nbsp;</td>
-            <td class="auto-style35">&nbsp;</td>
+            <td class="auto-style35"></td>
+            <td class="auto-style35" colspan="2"></td>
+            <td class="auto-style35"></td>
         </tr>
         <tr>
             <td class="auto-style35">&nbsp;</td>
@@ -140,9 +143,10 @@
         <tr>
             <td class="auto-style35">&nbsp;</td>
             <td class="auto-style35" colspan="2">
-                <asp:CheckBoxList ID="cbProductos" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="descripcion" DataValueField="precio">
+                <asp:CheckBoxList ID="cbProductos" runat="server" DataSourceID="SqlDataSource1" DataTextField="descripcion" DataValueField="precio">
                 </asp:CheckBoxList>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Parcial3ConnectionString %>" SelectCommand="SELECT [idmercaderia], [descripcion], [precio] FROM [Mercaderias]"></asp:SqlDataSource>
+                <asp:CustomValidator ID="validaProducto" runat="server" ErrorMessage="Debe seleccionar un producto*" ForeColor="Red" OnServerValidate="validaProducto_ServerValidate"></asp:CustomValidator>
             </td>
             <td class="auto-style35">&nbsp;</td>
         </tr>
@@ -170,7 +174,7 @@
                 <asp:Button ID="btnCalcular" runat="server" OnClick="btnCalcular_Click" Text="Calcular Total" Width="150px" />
             </td>
             <td class="auto-style35">
-                <asp:Button ID="btnPagar" runat="server" OnClick="btnPagar_Click" Text="Generar Factura" Width="150px" />
+                <asp:Button ID="btnPagar" runat="server" OnClick="btnPagar_Click" Text="Generar Factura" Width="150px" CausesValidation="False" />
             </td>
             <td class="auto-style35">&nbsp;</td>
         </tr>

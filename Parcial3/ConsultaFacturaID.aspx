@@ -76,7 +76,7 @@
         <tr>
             <td class="auto-style30">&nbsp;</td>
             <td class="auto-style17" colspan="2">
-                <asp:Button ID="btnConsultar" runat="server" Text="Consultar" Width="639px" />
+                <asp:Button ID="btnConsultar" runat="server" Text="Consultar" Width="639px" OnClick="btnConsultar_Click" />
             </td>
             <td class="auto-style31">&nbsp;</td>
         </tr>
@@ -89,7 +89,7 @@
         <tr>
             <td class="auto-style30">&nbsp;</td>
             <td class="auto-style17" colspan="2">
-                <asp:GridView ID="GridView1" runat="server" Width="642px">
+                <asp:GridView ID="gvFacturas" runat="server" Width="642px">
                 </asp:GridView>
             </td>
             <td class="auto-style31">&nbsp;</td>
