@@ -51,7 +51,9 @@
         </tr>
         <tr>
             <td class="auto-style30">&nbsp;</td>
-            <td class="auto-style18" colspan="2"><strong>CONSULTAR FACTURA POR FECHA</strong></td>
+            <td class="auto-style18" colspan="2">
+                <h5><strong>CONSULTAR FACTURA POR FECHA</strong></h5>
+            </td>
             <td class="auto-style31">&nbsp;</td>
         </tr>
         <tr>

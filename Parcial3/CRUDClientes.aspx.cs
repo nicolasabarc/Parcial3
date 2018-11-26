@@ -42,6 +42,7 @@ public partial class CRUDClientes : System.Web.UI.Page
         rut = txtRut.Text;
 
         dt = ClienteDAO.Buscar(rut);
+           
 
         if (dt != null)
         {
@@ -82,7 +83,7 @@ public partial class CRUDClientes : System.Web.UI.Page
         string rut;
         bool estado;
 
-        rut = txtRut.Text;
+        rut = txtRut.Text;       
 
         estado = ClienteDAO.Eliminar(rut);
 

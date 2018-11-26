@@ -62,7 +62,9 @@
         </tr>
         <tr>
             <td class="auto-style30">&nbsp;</td>
-            <td class="auto-style18" colspan="2"><strong>CONSULTAR FACTURA POR ID DE FOLIO</strong></td>
+            <td class="auto-style18" colspan="2">
+                <h5><strong>CONSULTAR FACTURA POR ID</strong></h5>
+            </td>
             <td class="auto-style31">&nbsp;</td>
         </tr>
         <tr>

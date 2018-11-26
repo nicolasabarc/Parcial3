@@ -70,7 +70,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style13">
-                        <asp:Image ID="imgLogo" runat="server" Height="140px" ImageUrl="~/src/logo.png" Width="160px" />
+                        <asp:HyperLink ID="HyperLink1" runat="server" ImageHeight="150px" ImageUrl="~/src/logo.png" ImageWidth="170px" NavigateUrl="~/PaginaPrincipal.aspx"></asp:HyperLink>
                     </td>
                     <td class="auto-style9"><h3>TodoRespuestosPC SPA</h3></td>
                     <td class="auto-style10">&nbsp;   <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">   
@@ -99,7 +99,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style17">&nbsp;</td>
-                    <td class="auto-style18"><h5><em>Programación Avanzada de Aplicaciones</em></h5></td>
+                    <td class="auto-style18"><h6><em>Programación Avanzada de Aplicaciones - Sección 351</em></h6></td>
                     <td class="auto-style17">&nbsp;</td>
                 </tr>
             </table>

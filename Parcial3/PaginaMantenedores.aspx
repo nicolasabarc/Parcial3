@@ -56,7 +56,9 @@
         <tr>
             <td class="auto-style30">
                 &nbsp;</td>
-            <td class="auto-style32"><strong>MANTENEDORES</strong></td>
+            <td class="auto-style32">
+                <h5><strong>MANTENEDORES</strong></h5>
+            </td>
             <td class="auto-style30"></td>
         </tr>
         <tr>

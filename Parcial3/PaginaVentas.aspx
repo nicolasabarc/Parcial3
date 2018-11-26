@@ -92,19 +92,10 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <table class="auto-style27">
         <tr>
-            <td class="auto-style46">
-                &nbsp;</td>
-            <td class="auto-style47" colspan="2">&nbsp;</td>
-            <td class="auto-style48">&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style46"></td>
-            <td class="auto-style47" colspan="2"></td>
-            <td class="auto-style48"></td>
-        </tr>
-        <tr>
             <td class="auto-style46">&nbsp;</td>
-            <td class="auto-style37" colspan="2"><strong>DATOS DE LA VENTA:</strong></td>
+            <td class="auto-style37" colspan="2">
+                <h5><strong>DATOS DE LA VENTA:</strong></h5>
+            </td>
             <td class="auto-style48">&nbsp;</td>
         </tr>
         <tr>
@@ -153,7 +144,9 @@
         </tr>
         <tr>
             <td class="auto-style50">&nbsp;</td>
-            <td class="auto-style56" colspan="2"><strong>&nbsp;<span class="auto-style45">SELECCIONE PRODUCTOS:</span></strong></td>
+            <td class="auto-style56" colspan="2">
+                <h5><strong>&nbsp;<span class="auto-style45">SELECCIONE PRODUCTOS:</span></strong></h5>
+            </td>
             <td class="auto-style51">&nbsp;</td>
         </tr>
         <tr>

@@ -94,7 +94,9 @@
     <tr>
         <td class="auto-style43"></td>
         <td class="auto-style23" rowspan="2">&nbsp;</td>
-        <td class="auto-style42" colspan="2" rowspan="2"><strong>Bienvenido</strong></td>
+        <td class="auto-style42" colspan="2" rowspan="2">
+            <h5><strong>Bienvenido</strong></h5>
+        </td>
         <td class="auto-style39" rowspan="2">&nbsp;</td>
         <td class="auto-style22"></td>
     </tr>

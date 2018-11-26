@@ -55,7 +55,9 @@
         </tr>
         <tr>
             <td class="auto-style34">&nbsp;</td>
-            <td class="auto-style35" colspan="2"><strong>CONSULTAS</strong></td>
+            <td class="auto-style35" colspan="2">
+                <h5><strong>CONSULTAS</strong></h5>
+            </td>
             <td class="auto-style34">&nbsp;</td>
         </tr>
         <tr>

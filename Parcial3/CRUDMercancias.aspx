@@ -117,7 +117,9 @@
     <tr>
         <td colspan="2">
                 &nbsp;</td>
-        <td class="auto-style35" colspan="2"><strong>MANTENEDOR DE MERCADERIAS</strong></td>
+        <td class="auto-style35" colspan="2">
+            <h5><strong>MANTENEDOR DE MERCADERIAS</strong></h5>
+        </td>
         <td colspan="2">&nbsp;</td>
     </tr>
     <tr>

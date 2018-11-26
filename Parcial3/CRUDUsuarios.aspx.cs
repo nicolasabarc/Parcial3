@@ -21,7 +21,7 @@ public partial class CRUDUsuarios : System.Web.UI.Page
         username = txtUsername.Text;
 
         dt = UsuarioDAO.Buscar(username);
-
+     
         if (dt != null)
         {
             txtNombre.Text = dt.Rows[0][1].ToString();
