@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Base.master.cs" Inherits="Base" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style2 {
+            width: 1289px;
+            height: 323px;
+        }
+        .auto-style9 {
+            width: 429px;
+            text-align: center;
+            height: 19px;
+        }
+        .auto-style10 {
+            width: 429px;
+            text-align: right;
+            height: 19px;
+        }
+        .auto-style12 {
+            height: 21px;
+            width: 429px;
+        }
+        .auto-style13 {
+            width: 429px;
+            height: 19px;
+        }
+        .auto-style15 {
+            height: 38px;
+        }
+        .auto-style17 {
+            height: 23px;
+        }
+        .auto-style18 {
+            height: 23px;
+            text-align: center;
+        }
+    
+
+    .auto-style24 {
+        width: 429px;
+    }
+    .auto-style25 {
+        width: 213px;
+    }
+    .auto-style26 {
+        width: 214px;
+        text-align: left;
+    }
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+
+        <table class="auto-style2">
+                <tr>
+                    <td class="auto-style12"></td>
+                    <td class="auto-style12"></td>
+                    <td class="auto-style12"></td>
+                </tr>
+                <tr>
+                    <td class="auto-style13">&nbsp;</td>
+                    <td class="auto-style9"><strong>TodoRespuestosPC SPA</strong></td>
+                    <td class="auto-style10">&nbsp;   <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">   
+                        <table class="auto-style24">
+                            <tr>
+                                <td class="auto-style25">&nbsp;</td>
+                                <td class="auto-style26">&nbsp;</td>
+                            </tr>
+                        </table>
+        </asp:ContentPlaceHolder></td>
+                </tr>
+                <tr>
+                    <td class="auto-style13">&nbsp;</td>
+                    <td class="auto-style13">&nbsp;</td>
+                    <td class="auto-style13">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="auto-style15">&nbsp;      <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">   
+        </asp:ContentPlaceHolder>
+</td>
+                </tr>
+                <tr>
+                    <td class="auto-style17">&nbsp;</td>
+                    <td class="auto-style18"><strong>Programación Avanzada de Aplicaciones</strong></td>
+                    <td class="auto-style17">&nbsp;</td>
+                </tr>
+            </table>
+
+   
+    </div>
+    </form>
+</body>
+</html>
