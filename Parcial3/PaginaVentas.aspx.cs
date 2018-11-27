@@ -11,11 +11,12 @@ using System.Drawing;
 
 public partial class PaginaVentas : System.Web.UI.Page
 {
+    Random random = new Random();
+
     protected void Page_Load(object sender, EventArgs e)
     {
         lblUsuario.Text = (string)Session["username"];
-
-        Random random = new Random();
+        
         txtFolio.Text = random.Next(10, 2000).ToString();
     }
 
@@ -23,12 +24,13 @@ public partial class PaginaVentas : System.Web.UI.Page
     {
         int total = 0;
         ArrayList productos = new ArrayList();
-        int nroproductos = cbProductos.Items.Cast<ListItem>().Count(li => li.Selected); //Contamos los productos seleccionados    
+        int nroproductos = cbProductos.Items.Cast<ListItem>().Count(li => li.Selected); //Contamos los productos seleccionados
+        int cantidadproductos = Int32.Parse(txtCantidad.Text);
 
 
-        if (nroproductos > 4) //Validamos que se hayan escogido menos de 4 productos
+        if (nroproductos > 1) //Validamos que se hayan escogido menos de 4 productos
         {
-            lblError.Text = "4 productos como maximo.";
+            lblError.Text = "1 productos como maximo.";
             lblError.ForeColor = Color.Red;
         }
         else
@@ -43,7 +45,14 @@ public partial class PaginaVentas : System.Web.UI.Page
                 }
             }
 
-            txtTotal.Text = total.ToString();
+            if(nroproductos * cantidadproductos < 5)
+            {
+                txtTotal.Text = total.ToString();
+            } else
+            {
+                lblError.Text = "Maximo 4 unidades por venta";
+                lblError.ForeColor = Color.Red;
+            }
         }
 
     }
@@ -51,7 +60,7 @@ public partial class PaginaVentas : System.Web.UI.Page
     protected void btnPagar_Click(object sender, EventArgs e)
     {
         string rutcliente, fechaemision,textofactura;
-        int idfactura, totalfactura;
+        int idfactura,idmercaderia, iddetallefactura, cantidad,totalfactura;
         DateTime fechaSQL = new DateTime();
         bool estado;
 
@@ -60,12 +69,19 @@ public partial class PaginaVentas : System.Web.UI.Page
         if (!textofactura.Equals(""))
         {
             idfactura = Int32.Parse(txtFolio.Text);
-            rutcliente = ddlRut.SelectedItem.ToString();
+            idmercaderia = Int32.Parse(cbProductos.SelectedValue);
+            iddetallefactura = random.Next(10, 2000);
+
             fechaSQL = DateTime.Parse(txtFecha.Text);
             fechaemision = fechaSQL.ToShortDateString();
-            totalfactura = Int32.Parse(txtTotal.Text);
+
+            rutcliente = ddlRut.SelectedItem.ToString();         
+          
+            cantidad = Int32.Parse(txtCantidad.Text);
+            totalfactura = Int32.Parse(txtTotal.Text) * cantidad;
 
             estado = FacturaDAO.Agregar(idfactura, rutcliente, fechaemision, totalfactura);
+            estado = FacturaDAO.AgregarDetalleFactura(iddetallefactura, idfactura, idmercaderia, cantidad, totalfactura);
 
             lblError.Text = (estado) ? lblError.Text = "Error" : lblError.Text = "";
 

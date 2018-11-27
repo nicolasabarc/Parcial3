@@ -51,7 +51,6 @@ public partial class CRUDClientes : System.Web.UI.Page
             txtDireccion.Text = dt.Rows[0][3].ToString();
             txtFono.Text = dt.Rows[0][4].ToString();
         }
-
     }
 
    

@@ -17,19 +17,21 @@ public partial class ConsultaFacturaID : System.Web.UI.Page
     protected void btnConsultar_Click(object sender, EventArgs e)
     {
         int folio;
-        DataTable dt = new DataTable();
+        DataTable dtFactura = new DataTable();
+        DataTable dtDetalleFactura = new DataTable();
 
         folio = Int32.Parse(txtId.Text);
 
-        dt = FacturaDAO.BuscarFacturaID(folio);
+        dtFactura = FacturaDAO.BuscarFacturaID(folio);
+        dtDetalleFactura = FacturaDAO.BuscarDetalleFacturaID(folio);
 
-        lblError.Visible = (dt.Rows.Count > 0) ? false : true;
+        lblError.Visible = (dtFactura.Rows.Count > 0) ? false : true;
 
-        gvFacturas.DataSource = dt;
+        gvFacturas.DataSource = dtFactura;
         gvFacturas.DataBind();
 
-
-
+        gvDetalleFactura.DataSource = dtDetalleFactura;
+        gvDetalleFactura.DataBind();
 
     }
 }

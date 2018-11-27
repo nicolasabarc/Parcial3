@@ -37,6 +37,14 @@
             border: 1px solid #ced4da;
             background-color: #fff;
         }
+        .auto-style33 {
+            height: 23px;
+            width: 322px;
+        }
+        .auto-style34 {
+            height: 23px;
+            text-align: left;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
@@ -56,8 +64,8 @@
         <tr>
             <td class="auto-style30">
                 &nbsp;</td>
-            <td class="auto-style30">&nbsp;</td>
-            <td class="auto-style30">&nbsp;</td>
+            <td class="auto-style33">&nbsp;</td>
+            <td class="auto-style33">&nbsp;</td>
             <td class="auto-style31">&nbsp;</td>
         </tr>
         <tr>
@@ -69,14 +77,14 @@
         </tr>
         <tr>
             <td class="auto-style30">&nbsp;</td>
-            <td class="auto-style30">&nbsp;</td>
-            <td class="auto-style30">&nbsp;</td>
+            <td class="auto-style33">&nbsp;</td>
+            <td class="auto-style33">&nbsp;</td>
             <td class="auto-style31">&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style30">&nbsp;</td>
-            <td class="auto-style30">FOLIO:</td>
-            <td class="auto-style30">
+            <td class="auto-style33">FOLIO:</td>
+            <td class="auto-style33">
                 <asp:TextBox ID="txtId" runat="server" TextMode="Number" CssClass="auto-style32" Width="193px"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtId" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
@@ -84,8 +92,8 @@
         </tr>
         <tr>
             <td class="auto-style30">&nbsp;</td>
-            <td class="auto-style30">&nbsp;</td>
-            <td class="auto-style30">&nbsp;</td>
+            <td class="auto-style33">&nbsp;</td>
+            <td class="auto-style33">&nbsp;</td>
             <td class="auto-style31">&nbsp;</td>
         </tr>
         <tr>
@@ -97,14 +105,28 @@
         </tr>
         <tr>
             <td class="auto-style30">&nbsp;</td>
-            <td class="auto-style30">&nbsp;</td>
-            <td class="auto-style30">&nbsp;</td>
+            <td class="auto-style33">&nbsp;</td>
+            <td class="auto-style33">&nbsp;</td>
             <td class="auto-style31">&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style30">&nbsp;</td>
             <td class="auto-style17" colspan="2">
                 <asp:GridView ID="gvFacturas" runat="server" Width="642px"  CssClass="table table-borderless table-striped" BorderWidth="0px">
+                </asp:GridView>
+            </td>
+            <td class="auto-style31">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style30">&nbsp;</td>
+            <td class="auto-style18" colspan="2">
+                &nbsp;</td>
+            <td class="auto-style31">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style30">&nbsp;</td>
+            <td class="auto-style34" colspan="2">
+                <asp:GridView ID="gvDetalleFactura" runat="server" Width="642px"  CssClass="table table-borderless table-striped" BorderWidth="0px">
                 </asp:GridView>
             </td>
             <td class="auto-style31">&nbsp;</td>
@@ -130,14 +152,14 @@
         </tr>
         <tr>
             <td class="auto-style30"></td>
-            <td class="auto-style30"></td>
-            <td class="auto-style30"></td>
+            <td class="auto-style33"></td>
+            <td class="auto-style33"></td>
             <td class="auto-style31"></td>
         </tr>
         <tr>
             <td class="auto-style30">&nbsp;</td>
-            <td class="auto-style30">&nbsp;</td>
-            <td class="auto-style30">&nbsp;</td>
+            <td class="auto-style33">&nbsp;</td>
+            <td class="auto-style33">&nbsp;</td>
             <td class="auto-style31">&nbsp;</td>
         </tr>
     </table>

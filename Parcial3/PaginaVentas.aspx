@@ -23,11 +23,6 @@
             text-decoration: underline;
             text-align: left;
         }
-        .auto-style38 {
-            height: 25px;
-            width: 321px;
-            text-decoration: underline;
-        }
         .auto-style42 {
             height: 26px;
             width: 321px;
@@ -74,6 +69,9 @@
         }
         .nuevoEstilo1 {
             text-decoration: none;
+        }
+        .auto-style57 {
+            height: 25px;
         }
     </style>
 </asp:Content>
@@ -166,14 +164,25 @@
         </tr>
         <tr>
             <td class="auto-style50">&nbsp;</td>
+            <td class="auto-style52">CANTIDAD:</td>
+            <td class="auto-style52">
+                <asp:TextBox ID="txtCantidad" runat="server" TextMode="Number" CssClass="form-control" Width="200px" MaxLength="1"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtCantidad" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+            </td>
+            <td class="auto-style51">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style50">&nbsp;</td>
             <td class="auto-style52" colspan="2">&nbsp;</td>
             <td class="auto-style51">&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style50"></td>
-            <td class="auto-style51"><strong>TOTAL: </strong></td>
-            <td class="auto-style38"><strong>
+            <td class="auto-style57" colspan="2">
+                <h6><strong>TOTAL:</h6>
+                <div class="text-center">
                 <asp:TextBox ID="txtTotal" runat="server" Width="150px" CssClass="form-control"></asp:TextBox>
+                </div>
                 </strong></td>
             <td class="auto-style51"></td>
         </tr>
